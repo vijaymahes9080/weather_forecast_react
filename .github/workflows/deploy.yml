@@ -13,11 +13,9 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Deploy to gh-pages branch manually
+      - name: Manual Checkout and Deploy
         run: |
+          git clone --branch main "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" .
           cd public
           git init
           git config user.name "github-actions[bot]"
