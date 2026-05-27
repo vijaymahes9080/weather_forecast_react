@@ -1,0 +1,8 @@
+node_modules/
+.env
+public/dist/
+bundle.css
+npm-debug.log
+yarn-error.log
+coverage/
+.DS_Store
